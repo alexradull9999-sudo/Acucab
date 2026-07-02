@@ -1,0 +1,6 @@
+{
+  "name": "Акустические кабины АКУКАБ",
+  "description": "Премиальные звукоизоляционные кабины и ширмы для офисов, коворкингов, студий и защищенных переговоров. Тишина и приватность под ключ за 1 день.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
