@@ -19,6 +19,15 @@ const IMAGES_MAP: Record<string, string> = {
   "panels": panelsImg,
 };
 
+const CTA_LABEL_MAP: Record<string, string> = {
+  "office": "для офисных переговоров",
+  "state-secret": "для кабин для гос. тайны",
+  "recording": "для кабин для звукозаписи",
+  "screens": "для акустических ширм",
+  "medical": "для медучреждений",
+  "panels": "для акустических панелей",
+};
+
 interface CatalogProps {
   onOpenModal: (categoryName?: string) => void;
 }
@@ -124,7 +133,7 @@ export default function Catalog({ onOpenModal }: CatalogProps) {
                   onClick={() => onOpenModal(activeCategory.category)}
                   className="px-6 py-3.5 bg-[#C5A880] hover:bg-[#B59870] text-[#121314] font-semibold text-xs tracking-wider uppercase rounded transition-colors"
                 >
-                  Запросить чертежи и смету для {activeCategory.category}
+                  Запросить чертежи и смету {CTA_LABEL_MAP[activeCategory.id] || `для ${activeCategory.category}`}
                 </button>
               </div>
             </div>
